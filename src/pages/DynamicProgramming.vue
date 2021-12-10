@@ -4,22 +4,30 @@
     <Button
       label="Submit"
       @click="display = true"
-      icon="pi pi-check"
-      iconPos="right"
     />
-    <Dialog header="Header" :visible.sync="display">
-      DP Page
+    <Dialog header="Porblem Input and Output" :visible.sync="display">
+      <input-modal @action="simpleDP" question="Reverse the contents of an array" instruction="Enter only digits separated by spaces" />
     </Dialog>
   </div>
 </template>
 
 <script>
+import InputModal from "../components/InputModal.vue";
+
 export default {
   name: "DynamicProgramming",
+  components: {
+    InputModal,
+  },
   data() {
     return {
       display: false,
     };
+  },
+  methods: {
+    simpleDP(value) {
+      console.log("Executing simple DP", value);
+    },
   },
 };
 </script>

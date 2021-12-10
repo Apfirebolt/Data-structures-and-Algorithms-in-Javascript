@@ -10,6 +10,21 @@ const routes = [
     component: () => import('../pages/Home.vue'),
   },
   {
+    path: '/basics',
+    name: 'Basics',
+    component: () => import('../pages/Basics.vue'),
+  },
+  {
+    path: '/classes',
+    name: 'Classes',
+    component: () => import('../pages/Classes.vue'),
+  },
+  {
+    path: '/closure',
+    name: 'Closure',
+    component: () => import('../pages/Closure.vue'),
+  },
+  {
     path: '/array',
     name: 'Array',
     component: () => import('../pages/Array.vue'),
@@ -53,6 +68,11 @@ const routes = [
     path: '/bits',
     name: 'BitWise',
     component: () => import('../pages/Bits.vue'),
+  },
+  {
+    path: '/string',
+    name: 'String',
+    component: () => import('../pages/String.vue'),
   },
 ];
 

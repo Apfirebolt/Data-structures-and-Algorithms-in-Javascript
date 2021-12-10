@@ -6,12 +6,8 @@
       @click="display = true"
     />
     <Dialog header="Porblem Input and Output" :visible.sync="display">
-      <input-modal @action="simpleArray" question="Simple Array Demo" instruction="Enter only digits separated by spaces" />
+      <input-modal @action="simpleCurry" question="Curry Function Demo" instruction="Enter only digits separated by spaces" />
     </Dialog>
-    <Dialog header="Program Result" :visible.sync="showResult">
-      <p>{{ result }}</p>
-    </Dialog>
-    {{ result }}
   </div>
 </template>
 
@@ -19,22 +15,18 @@
 import InputModal from "../components/InputModal.vue";
 
 export default {
-  name: "Array",
+  name: "CurryFunction",
   components: {
     InputModal,
   },
   data() {
     return {
       display: false,
-      showResult: false,
-      result: null
     };
   },
   methods: {
-    simpleArray(value) {
-      this.result = value.split(' ');
-      this.showResult = true;
-      this.display = false;
+    simpleCurry(value) {
+      console.log("Executing simple DP", value);
     },
   },
 };
