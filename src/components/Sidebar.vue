@@ -28,6 +28,14 @@ export default {
           link: "Classes",
         },
         {
+          text: "Search",
+          link: "Search",
+        },
+        {
+          text: "Tree",
+          link: "Tree",
+        },
+        {
           text: "Array",
           link: "Array",
         },

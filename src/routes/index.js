@@ -15,6 +15,16 @@ const routes = [
     component: () => import('../pages/Basics.vue'),
   },
   {
+    path: '/search',
+    name: 'Search',
+    component: () => import('../pages/Search.vue'),
+  },
+  {
+    path: '/tree',
+    name: 'Tree',
+    component: () => import('../pages/Tree.vue'),
+  },
+  {
     path: '/classes',
     name: 'Classes',
     component: () => import('../pages/Classes.vue'),

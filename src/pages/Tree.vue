@@ -1,45 +1,39 @@
 <template>
   <div class="hello">
     <Dialog></Dialog>
-    <Button label="Submit" @click="display = true" />
+    <Button
+      label="Submit"
+      @click="display = true"
+    />
+    <p class="--text-color-red-200"></p>
     <Dialog header="Porblem Input and Output" :visible.sync="display">
-      <input-modal
-        @action="simpleArray"
-        question="Simple Stack Demo"
-        instruction="Enter only digits separated by spaces"
-      />
+      <input-modal @action="simpleTree" question="Simple Array Demo" instruction="Enter only digits separated by spaces" />
     </Dialog>
-    {{ arrayData }}
     <Dialog header="Program Result" :visible.sync="showResult">
       <p>{{ result }}</p>
     </Dialog>
+    {{ result }}
   </div>
 </template>
 
 <script>
 import InputModal from "../components/InputModal.vue";
-import ArrayPrograms from "../data/arrayPrograms";
 
 export default {
-  name: "StackPage",
+  name: "Tree",
   components: {
     InputModal,
-  },
-  mounted() {
-    this.arrayData = ArrayPrograms;
-    console.log('array data ', this.arrayData);
   },
   data() {
     return {
       display: false,
-      arrayData: [],
       showResult: false,
-      result: null,
+      result: null
     };
   },
   methods: {
-    simpleArray(value) {
-      this.result = value.split(" ");
+    simpleTree(value) {
+      this.result = value.split(' ');
       this.showResult = true;
       this.display = false;
     },
