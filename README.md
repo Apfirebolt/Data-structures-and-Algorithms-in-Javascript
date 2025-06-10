@@ -1,45 +1,59 @@
-# Github User Finder App - Vue JS and Vuesax ⚡️
+# Vue Data Structures and Algorithms
+
+A simple dinosaur info app to show dino data in form of table using ag-grid and related libraries.
+
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## Table of Contents
+1. [Project Briefing](#project-briefing)
+2. [Technologies Used](#technologies-used)
+3. [Screenshots](#screenshots)
+4. [Updates](#updates)
+5. [Thank You](#thank-you)
 
 ## Project Briefing
 
-Inspired by the Github Finder app written by Brad Traversy in React. This is the Vue version of the app with pretty much the same features as the one created by Brad here [Github Finder by Brad Traversy](https://github.com/bradtraversy/github-finder). This uses Vuesax UI library in Vue for UI components.
+This repository would have some solutions of data structures and algorithm related problems using Vue JS components.
 
-Made with ❤️ by **[@apfirebolt](https://github.com/Apfirebolt/)**
-## Features
+## Technologies Used
+- Vue 3
+- Vite
+- JavaScript (ES6+)
+- HTML5
+- CSS3
 
-- Makes use of Github public API to search for users and repositories on Github. 
-- Github Search User functionality is provided.
-- Search detail results is available for each user where you can see various details of the user and the recent repositories on which the user has worked on.
-- Vuesax components used for Cards, Buttons, Grids and More in this app. 
+## Writing Test cases
 
-## Built With
+Test cases are written using Vitest framework. Install the related dependencies for the testing framework and tweak vite config settings.
 
-* [Vue](https://vuejs.org//)
-* [Vuesax](https://vuesax.com//)
+```Javascript
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-## Project setup
-
-Simply install node modules for the app and run the serve script.
-
-```
-npm install
-npm run serve
-```
-
-For production, run the build npm command and serve the static files through a production or development server.
-
-```
-npm run build
-npm start
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  test: {
+    environment: 'happy-dom',
+  },
+  server: {
+    port: 8080
+  }
+})
 ```
 
-## Project Screenshots
+![Dinosaur Table View](./screenshots/1.png)
 
-Please find some of the screenshots of the application. Below is the screenshot of the Search Page.
+## Updates
+- **v1.0.0**: Initial release with basic functionality.
+- **v1.1.0**: Added new features and improved performance.
 
-![alt text](./screenshots/search_page.png)
+## Thank You
+Thank you for exploring the Vue Dino App! Feel free to contribute or provide feedback to help improve the project. If you liked this project consider giving it a ⭐
 
-Screenshot of the user detail page where you can view Github user details of a user and the repositories they've worked on most recently.
-
-![alt text](./screenshots/detail_page.png)
-
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).

@@ -1,11 +1,11 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import './style.css'
+import router from './routes'
 import App from './App.vue'
-import router from './routes/index';
-import './plugins/primevue.js'
 
-Vue.config.productionTip = false
+// AOS imports
+import 'aos/dist/aos.css'
 
-new Vue({
-  router,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App)
+app.use(router)
+app.mount('#app');
