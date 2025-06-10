@@ -19,6 +19,21 @@ const routes = [
         component: () => import('../screens/DataStructure.vue')
     },
     {
+        path: '/array',
+        name: 'Array',
+        component: () => import('../screens/Array.vue')
+    },
+    {
+        path: '/graph',
+        name: 'Graph',
+        component: () => import('../screens/Graph.vue')
+    },
+    {
+        path: '/linked-list',
+        name: 'LinkedList',
+        component: () => import('../screens/LinkedList.vue')
+    },
+    {
         path: '/:catchAll(.*)',
         name: 'NotFound',
         component: NotFound
